@@ -84,8 +84,8 @@ int main() {
 // echo 'CuptiUseRawGpuTimestamps=false' >> "$(nsys -z)"
 //
 // Output from code:
-// somesh@LAPTOP-OV0CBJU0:~/Git/CudaExploration/03_basic_kernels/03_profiling$ nvcc -o 01_exec 01_nvtx_matmul.cu -lnvToolsExt
-// somesh@LAPTOP-OV0CBJU0:~/Git/CudaExploration/03_basic_kernels/03_profiling$ nsys profile --stats=true ./01_exec 
+// ~/Git/CudaExploration/03_basic_kernels/03_profiling$ nvcc -o 01_exec 01_nvtx_matmul.cu -lnvToolsExt
+// ~/Git/CudaExploration/03_basic_kernels/03_profiling$ nsys profile --stats=true ./01_exec 
 // Generating '/tmp/nsys-report-09e9.qdstrm'
 // [1/8] [========================100%] report2.nsys-rep
 // [2/8] [========================100%] report2.sqlite

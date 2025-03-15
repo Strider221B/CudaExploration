@@ -28,5 +28,5 @@ clean:
 	@rm -f 01 02 03_cu *.o
 
 # How to run:
-# somesh@LAPTOP-OV0CBJU0:~/Git/CudaExploration/02_cpp/05_make_files$ make 03
-# somesh@LAPTOP-OV0CBJU0:~/Git/CudaExploration/02_cpp/05_make_files$ make clean
+# ~/Git/CudaExploration/02_cpp/05_make_files$ make 03
+# ~/Git/CudaExploration/02_cpp/05_make_files$ make clean

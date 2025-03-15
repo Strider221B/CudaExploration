@@ -51,7 +51,7 @@ int main() {
 }
 
 // Output:
-// somesh@LAPTOP-OV0CBJU0:~/Git/CudaExploration/03_basic_kernels/04_atomics$ nvcc -o 01_exec 01_atomicAdd.cu 
-// somesh@LAPTOP-OV0CBJU0:~/Git/CudaExploration/03_basic_kernels/04_atomics$ ./01_exec 
+// ~/Git/CudaExploration/03_basic_kernels/04_atomics$ nvcc -o 01_exec 01_atomicAdd.cu 
+// ~/Git/CudaExploration/03_basic_kernels/04_atomics$ ./01_exec 
 // Non-atomic counter value: 143
 // Atomic counter value: 1000000

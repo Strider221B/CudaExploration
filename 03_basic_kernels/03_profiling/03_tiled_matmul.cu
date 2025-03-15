@@ -84,8 +84,8 @@ int main() {
 }
 
 // Output
-// somesh@LAPTOP-OV0CBJU0:~/Git/CudaExploration/03_basic_kernels/03_profiling$ nvcc -o 03_exec 03_tiled_matmul.cu -lnvToolsExt
-// somesh@LAPTOP-OV0CBJU0:~/Git/CudaExploration/03_basic_kernels/03_profiling$ nsys profile --stats=true ./03_exec
+// ~/Git/CudaExploration/03_basic_kernels/03_profiling$ nvcc -o 03_exec 03_tiled_matmul.cu -lnvToolsExt
+// ~/Git/CudaExploration/03_basic_kernels/03_profiling$ nsys profile --stats=true ./03_exec
 // Generating '/tmp/nsys-report-eeab.qdstrm'
 // [1/8] [========================100%] report2.nsys-rep
 // [2/8] [========================100%] report2.sqlite

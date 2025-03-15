@@ -21,12 +21,12 @@ int main() {
 }
 
 // Output:
-// somesh@LAPTOP-OV0CBJU0:~/Git/CudaExploration/02_cpp/04_macros_global$ gcc -o 01_exec ./01.c
+// ~/Git/CudaExploration/02_cpp/04_macros_global$ gcc -o 01_exec ./01.c
 // ./01.c:11: warning: "radius" redefined
 //    11 | #define radius 10
 //       | 
 // ./01.c:7: note: this is the location of the previous definition
 //     7 | #define radius 70
 //       | 
-// somesh@LAPTOP-OV0CBJU0:~/Git/CudaExploration/02_cpp/04_macros_global$ ./01_exec 
+// ~/Git/CudaExploration/02_cpp/04_macros_global$ ./01_exec 
 // Area of circle with radius 10: 314.159000
