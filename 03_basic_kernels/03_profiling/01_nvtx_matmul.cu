@@ -157,3 +157,8 @@ int main() {
 //     /home/somesh/Git/CudaExploration/03_basic_kernels/03_profiling/report2.sqlite
 //
 // Launch UI profiler -> /usr/local$ ./cuda-12.6/nsight-compute-2024.3.0/ncu-ui
+// file to open: report2.nsys-rep
+// for profiling via PM Sampling, ensure you launch NVidia Control Panel with admin rights and then enable developer options and then select
+// "Allow GPU Performance Counters to all users."
+// Also, when profiling ensure detailed metrics is enabled as we are interested in memory workload -> memory throughput. 
+// Higher the throughput, better it is.
