@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <iostream>
 
+using namespace std;
+
 #define CHECK_CUDA_ERROR(val) check((val), #val, __FILE__, __LINE__)
 template <typename T>
 void check(T err, const char* const func, const char* const file, const int line) {
@@ -35,7 +37,6 @@ int main(void) {
     float *h_data, *d_data;
     cudaStream_t stream1, stream2;
     cudaEvent_t event;
-    std::cout << event << std::endl;
 
     // Allocate host and device memory
     CHECK_CUDA_ERROR(cudaMallocHost(&h_data, size));  // Pinned memory for faster transfers
@@ -51,9 +52,11 @@ int main(void) {
     CHECK_CUDA_ERROR(cudaDeviceGetStreamPriorityRange(&leastPriority, &greatestPriority));
     CHECK_CUDA_ERROR(cudaStreamCreateWithPriority(&stream1, cudaStreamNonBlocking, leastPriority));
     CHECK_CUDA_ERROR(cudaStreamCreateWithPriority(&stream2, cudaStreamNonBlocking, greatestPriority));
+    cout << leastPriority << " " << greatestPriority << endl;
 
     // Create event
     CHECK_CUDA_ERROR(cudaEventCreate(&event));
+    cout << event << endl;
 
     // Asynchronous memory copy and kernel execution in stream1
     CHECK_CUDA_ERROR(cudaMemcpyAsync(d_data, h_data, size, cudaMemcpyHostToDevice, stream1));
@@ -101,19 +104,8 @@ int main(void) {
 
 // Output:
 // ~/Git/CudaExploration/03_basic_kernels/05_streams$ nvcc -o 02_exec 02_stream_advanced.cu 
-// 02_stream_advanced.cu(38): warning #549-D: variable "event" is used before its value is set
-//       std::cout << event << std::endl;
-//                    ^
-
-// Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
-
-// 02_stream_advanced.cu(38): warning #549-D: variable "event" is used before its value is set
-//       std::cout << event << std::endl;
-//                    ^
-
-// Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
-
 // ~/Git/CudaExploration/03_basic_kernels/05_streams$ ./02_exec 
-// 0x7fc59b233e88
+// 0 -5
+// 0x55c003095390
 // Stream callback: Operation completed
 // Test PASSED
