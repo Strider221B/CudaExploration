@@ -27,6 +27,7 @@
   
 ### deviceQuery  
   
+<pre>
 Detected 1 CUDA Capable device(s)  
   
 Device 0: "NVIDIA GeForce GTX 1650"  
@@ -68,6 +69,7 @@ Device 0: "NVIDIA GeForce GTX 1650"
      < Default (multiple host threads can use ::cudaSetDevice() with device simultaneously) >  
   
 deviceQuery, CUDA Driver = CUDART, CUDA Driver Version = 12.6, CUDA Runtime Version = 12.6, NumDevs = 1  
+</pre>
   
 ### CPU Information  
   
